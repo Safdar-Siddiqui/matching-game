@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(209, 206, 206);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  gap: 30px;
+  background-color: rgb(31, 123, 154);
+  padding: 15px 30px;
+  border-radius: 25px;
+}
+
+h2 {
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reset {
+  padding: 10px 15px;
+  /* color: rgb(12, 85, 12); */
+  color: rgb(31, 123, 154);
+  background: #fff;
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.reset:hover{
+    color: #fff;
+    /* background: rgb(12, 85, 12); */
+    background: rgb(226, 164, 18);
+}
+
+.game {
+  width: 400px;
+  height: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: #fff;
+  transition: 0.25s;
+  transform: rotateY(180deg);
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.item.boxOpen {
+  transform: rotateY(0deg);
+  border-radius: 15px;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(246, 195, 76);
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  border-radius: 13px;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg);
+}
+
+.winGame{
+    /* width: 200px;
+    height: 100px; */
+    font-size: 2.2em;
+    line-height: 40px;
+    padding: 20px;
+    display: none;
+    margin: auto auto;
+    background-color: chocolate;
+    color: #fff;
+    border-radius: 25px;
+    z-index: 1;
+    position: fixed;
+}
+
+.yesBtn, .noBtn{
+    padding: 5px 10px;
+    width: 80px;
+    background-color: teal;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
