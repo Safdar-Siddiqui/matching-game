@@ -8,18 +8,26 @@
   </head>
   <body>
     <div class="container">
-      <h2>Matching Game</h2>
+      <h3>Matching Game</h3>
       <div class="game"></div>
       <button class="reset" onclick="window.location.reload()">
         Reset Game
       </button>
     </div>
 
-    <div class="winGame">You Won... <br> Do you want to play again?
-        <br>
+    <div class="winGameContainer">
+    <div class="winGame">
+      <div class="text">
+        <h3> You Won... </h3> 
+        <span> Do you wish to play again? </span>
+      </div>
+      <div class="buttons">
         <button class="yesBtn" onclick="window.location.reload()"> YES </button>
         <button class="noBtn" onclick="noFunc()"> NO </button>
+      </div>
     </div>
+  </div>
+
 
     <script src="script.js"></script>
   </body>

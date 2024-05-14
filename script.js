@@ -40,7 +40,7 @@ for (var i = 0; i < emojis.length; i++) {
 
           if (document.querySelectorAll(".boxMatch").length == emojis.length) {
             // alert("win");
-            var won = document.querySelector('.winGame');
+            var won = document.querySelector('.winGameContainer');
             won.style.display = "block";
 
 
@@ -58,5 +58,5 @@ for (var i = 0; i < emojis.length; i++) {
 
 function noFunc(){
 
-    document.querySelector('.winGame').style.display = "none"
+    document.querySelector('.winGameContainer').style.display = "none"
 }
